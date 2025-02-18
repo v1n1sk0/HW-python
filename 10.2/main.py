@@ -8,11 +8,9 @@ from src.tables_reader import csv_reader, xlsx_reader
 from src.utils import get_amount_transactions, get_financial_transactions
 from src.widget import number_or_account
 
-
 def main_fail() -> str:
     """Если что-то не так, выводит ошибку."""
     return "Неа. Попробуйте ещё раз.\n"
-
 
 def file_format() -> Tuple[List[Dict[str, Any]], str]:
     """Определяет расширение файла, с которым будем работать. """
@@ -36,7 +34,6 @@ def file_format() -> Tuple[List[Dict[str, Any]], str]:
         print(main_fail())
         file_format()
         return [], ""
-
 
 def status_sort(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """Сортировка по статусу операции."""
@@ -122,8 +119,6 @@ def main() -> None:
                 print(number_or_account(operation["to"]))
             print(f"Сумма: {get_amount_transactions(operation)}руб. \n")
     else:
-        print("Счет пуст")
-
-
+        print("Счет абсолютно пуст")
 if __name__ == "__main__":
     main()
