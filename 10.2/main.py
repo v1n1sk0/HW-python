@@ -45,7 +45,6 @@ def status_sort(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
         status_sort(data)
     return filter_state(data, status)
 
-
 def date_sort(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
     """Сортировка по дате."""
     user_sort = input("Отсортировать операции по дате? Да/Нет \n")
