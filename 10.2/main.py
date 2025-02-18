@@ -97,7 +97,7 @@ def word_sort(data: List[Dict[str, Any]]) -> List[Dict[str, Any]]:
 
 
 def main() -> None:
-    """Основная функция, запускающая все предыдущие и завершающая работу."""
+    """Основная функция запускающая все предыдущие и завершающая работу."""
     data, file_type = file_format()
     data = status_sort(data)
     data = date_sort(data)
